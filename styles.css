@@ -1,0 +1,1596 @@
+.responsive-table-1 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.responsive-table-1 td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center; /* Center the text horizontally */
+  width: 33.33%; /* Equal width for 3 columns */
+  height: 100px; /* Set the height for all cells */
+  display: flex; /* Use flexbox for centering content vertically */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-table-1 tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .responsive-table-1 td {
+    display: block;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height on small screens */
+  }
+
+  .responsive-table-1 td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+
+.responsive-table-2 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table-2 td {
+  border: none;
+  padding: 8px;
+}
+
+.image-cell {
+  width: 30%; /* Set the width of the image cell */
+}
+
+.image-cell img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-cell {
+  width: 70%; /* Set the width of the text cell */
+}
+
+.text-cell h3,
+.text-cell p {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-table-2 tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .image-cell,
+  .text-cell {
+    width: auto; /* Reset the width on small screens */
+  }
+
+  .text-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.custom-h2,
+.custom-h3,
+.custom-h4 {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.custom-h2 {
+  font-size: 2.25rem; /* Adjust the font size as needed */
+}
+
+.custom-h3 {
+  font-size: 1.75rem; /* Adjust the font size as needed */
+}
+
+.custom-h4 {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+/* Responsive font sizes */
+@media screen and (max-width: 991px) {
+  .custom-h2 {
+    font-size: 1.75rem;
+  }
+
+  .custom-h3 {
+    font-size: 1.5rem;
+  }
+
+  .custom-h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom-h2 {
+    font-size: 1.5rem;
+  }
+
+  .custom-h3 {
+    font-size: 1.3rem;
+  }
+
+  .custom-h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Feature labels */
+.feature-label-special {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-right: 10px;
+    line-height: 1.5;
+}
+
+.feature-label-special i {
+    margin-right: 5px;
+}
+
+.has-feature-special {
+    color: green;
+}
+
+.no-feature-special {
+    color: red;
+}
+
+/* Stock status */
+.feature-label-special.stock-sufficient {
+    color: green;
+}
+
+.feature-label-special.stock-limited {
+    color: orange;
+}
+
+.feature-label-special.stock-out {
+    color: grey;
+}
+
+/* For responsive design */
+@media screen and (max-width: 768px) {
+    .feature-label-special {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Optimizat iarna table */
+.optim-iarna-table {
+    width: 100%;
+}
+
+.optim-iarna-table .image-cell {
+    width: 20%;
+}
+
+.optim-iarna-table .text-cell {
+    width: 80%;
+    vertical-align: middle;
+}
+
+.h3-optim-iarna, .p-optim-iarna {
+    margin: 0;
+}
+
+.h3-optim-iarna {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+.p-optim-iarna {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: grey;
+}
+
+/* Discount percentage table */
+.discount-percentage-table {
+    width: 100%;
+}
+
+.discount-percentage-table .discount-icon-cell {
+    width: 20%;
+}
+
+.discount-percentage-table .discount-text-cell {
+    width: 80%;
+    vertical-align: middle;
+}
+
+.h3-discount-percentage, .p-discount-percentage {
+    margin: 0;
+}
+
+.h3-discount-percentage {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: red;
+}
+
+.p-discount-percentage {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: grey;
+}
+
+/* Responsive design for small screens */
+@media only screen and (max-width: 600px) {
+    .optim-iarna-table .image-cell,
+    .optim-iarna-table .text-cell,
+    .discount-percentage-table .discount-icon-cell,
+    .discount-percentage-table .discount-text-cell {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+/* .category-feature-labels {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+} */
+.category-feature-labels {
+	position: absolute;
+	margin-top: 70%;
+	margin-left: -5%;
+	width: 110% !important;
+	display: flex;
+	flex-wrap: wrap;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.category-label {
+    font-size: .6rem;
+    margin-bottom: .4rem;
+	padding: .25rem;
+    font-weight: bold;
+	margin-left: .4rem;
+	width: 7rem;
+}
+
+.has-feature-category {
+    color: white;
+    background-color: #39B24C;
+}
+
+.no-feature-category {
+    color: white;
+    background-color: red;
+	text-decoration: line-through;
+}
+/* MODIFICARI RAZVAN */
+/* PRODUS - INFORMATII SUPLIMENTARE */
+.woocommerce table.shop_attributes td {
+	padding: 1% !important;
+}
+.woocommerce table.shop_attributes th {
+	border: 1px solid lightgray !important;
+	padding: 1% !important;
+}
+.woocommerce table.shop_attributes td p {
+	padding: 0;
+}
+/* REDUCERI */
+.onsale {
+	padding: 2% !important;
+	text-transform: uppercase; 
+}
+.woocommerce span.onsale {
+	min-height: 0;
+	min-width: 0;
+	border-radius: 0;
+	line-height: .6;
+	background-color: #39B24C;
+}
+/* LOOP PRODUSE */
+.woocommerce-loop-product__buttons a {
+	width: 100%;
+}
+/* .category-feature-labels {
+	display: flex;
+	margin-top: 80%;
+	width: 100% !important;
+	flex-wrap: wrap;
+} */
+/* .category-feature-labels {
+	flex: .5 1 50%;
+	padding: 0;
+	padding-bottom: 1%;
+	margin: 0; 
+} */
+/* .category-feature-label {
+	font-size: .7rem !important;
+	font-weight: 400;
+	text-align: left;
+	background-color: transparent;
+	color: #2AA7EC;
+}  */
+/* PRODUCT TITLE */
+.woocommerce-loop-product__title {
+	color: #39B24C;
+}
+/* PRICE */
+.woocommerce-Price-amount {
+	color: #2AA7EC;
+	padding-right: 10%;	font-family: "Montserrat", "Sans Serif";
+	font-weight: 800 !important;
+}
+/* PRODUCT */
+.product {
+	text-align: center !important;
+}
+/* PRODUCT BREADCRUMBS */
+.woocommerce-breadcrumb {
+	text-align: left;
+}
+/* PRODUCT TITLE */
+.product_title {
+	text-align: left;
+}
+.elementor-page-title  {
+	margin: 0; 
+}
+/* FONTS */
+.elementor-heading-title {
+	font-family: "Montserrat", Sans-serif !important;
+	font-size: 1.4rem !important;
+	font-weight: 400 !important;
+	color: #2AA7EC !important;
+}
+.woocommerce-product-details__short-description {
+	font-family: "Montserrat", Sans-serif !important;
+	font-size: 1rem !important;
+	line-height: 1.2rem !important;
+	font-weight: 400 !important;
+}
+.woocommerce-breadcrumb {
+	color: #2AA7EC !important;
+}
+/* PRODUCT FEATURE TABLE */
+.feature-table-product td {
+	border: 3px solid;
+	color: #2AA7EC;
+	width: 50%;
+	margin-left: 1% !important;
+}
+.feature-table-product span {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+table td, table th {
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: transparent !important;
+}
+table td:hover, table th:hover {
+	background-color: transparent;
+}
+.feature-table-product tr {
+	display: flex;
+	margin-top: 1%;
+	background-color: transparent;
+}
+.feature-label-special {
+	font-size: .8rem;
+	font-weight: 400;
+}
+
+.responsive-feature-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* PRODUCT FEATURE CONTAINER */
+.feature-container {
+    width: 50%;  /* mobile layout */
+    box-sizing: border-box; /* include padding and border in element's total width and height */
+    padding: 5px; /* optional, for some spacing */
+}
+
+@media (min-width: 768px) {
+    .feature-container {
+        width: 25%; /* desktop layout */
+    }
+}
+
+
+/* STOC */
+.stock, .in-stock {
+	display: none !important;
+}
+/* PRODUCT PRET & ADD TO CART */
+.price {
+	margin: 0;
+}
+.quantity {
+	width: 20%;
+}
+.single_add_to_cart_button, .qty {
+	width: 68% !important;
+	border: 4px solid !important;
+	font-family: "Montserrat", Sans-serif !important;
+	background-color: #39B24C !important;
+	font-weight: 400;
+	color: white !important;
+}
+.single_add_to_cart_button {
+	margin-left: 0 !important;
+}
+/* PRODUCT DIN ACEEASI GAMA */
+.elementor-shortcode a {
+	background-color: #39B24C;
+	padding: 5%;
+	font-weight: 400;
+	color: white;
+}
+/* PRODUCT IMAGE */
+.elementor-element-populated {
+	box-shadow: none !important;
+}
+
+.show-on-sale {
+	display: none;
+}
+
+.sale .show-on-sale {
+	display: block;
+}
+
+.e-checkout__container .button.primary {
+	padding: var(--sections-padding,16px 30px);
+    margin-bottom: 20px;
+}
+
+.woocommerce-product-attributes-item__label {
+	width: 50%!important;
+}
+
+/* Video table product page */
+.table-video-p-clima {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table-video-p-clima > div {
+    flex: 50%;
+    padding: 5px;
+}
+
+.table-video-p-clima > div.video-container {
+    position: relative;
+    overflow: hidden;
+    height: 360px; /* Adjust this value based on your needs for larger screens */
+}
+
+.table-video-p-clima > div.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.table-video-p-clima-h3 {
+    font-size: 20px;
+    /* Add more styles as needed */
+}
+
+.table-video-p-clima-p {
+    font-size: 16px;
+    /* Add more styles as needed */
+}
+
+@media (max-width: 400px) {
+    .table-video-p-clima > div {
+        flex: 100%;
+    }
+    .table-video-p-clima > div.video-container {
+        height: 200px; /* Adjust this value based on your needs for smaller screens */
+    }
+}
+
+/* PRODUCT MIDEA */
+.table-midea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table-midea .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-midea .cell {
+    flex: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.table-midea .midea-pp .midea-h3 {
+    font-size: 24px!important;
+    line-height: 1.2!important; /* Adjust as needed */
+    color: #0099da!important;
+}
+
+.table-midea .midea-pp .midea-p {
+    font-size: 16px!important;
+    line-height: 1.5!important; /* Adjust as needed */
+}
+
+.table-midea .cell img {
+    max-width: 100%;
+    height: auto;
+}
+
+.table-midea,
+.table-midea .row,
+.table-midea .cell {
+    border: none;
+    border-collapse: collapse;
+}
+
+
+@media (max-width: 400px) {
+    .table-midea .cell {
+        flex: 100%;
+    }
+}
+
+/* PRODUCT Yamato */
+.table-yamato {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table-yamato .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-yamato .cell {
+    flex: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.table-yamato .yamato-pp .yamato-h3 {
+    font-size: 24px!important;
+    line-height: 1.2!important; /* Adjust as needed */
+    color: #DA4100!important;
+}
+
+.table-yamato .yamato-pp .yamato-p {
+    font-size: 16px!important;
+    line-height: 1.5!important; /* Adjust as needed */
+}
+
+.table-yamato .cell img {
+    max-width: 100%;
+    height: auto;
+}
+
+.table-yamato,
+.table-yamato .row,
+.table-yamato .cell {
+    border: none;
+    border-collapse: collapse;
+}
+
+
+@media (max-width: 400px) {
+    .table-yamato .cell {
+        flex: 100%;
+    }
+}
+
+/* PRODUCT gree */
+.table-gree {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table-gree .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-gree .cell {
+    flex: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.table-gree .gree-pp .gree-h3 {
+    font-size: 24px!important;
+    line-height: 1.2!important; /* Adjust as needed */
+    color: #003F5A!important;
+}
+
+.table-gree .gree-pp .gree-p {
+    font-size: 16px!important;
+    line-height: 1.5!important; /* Adjust as needed */
+}
+
+.table-gree .cell img {
+    max-width: 100%;
+    height: auto;
+}
+
+.table-gree,
+.table-gree .row,
+.table-gree .cell {
+    border: none;
+    border-collapse: collapse;
+}
+
+
+@media (max-width: 400px) {
+    .table-gree .cell {
+        flex: 100%;
+    }
+}
+
+/* Stock product page */
+
+.custom-icon-pp {
+  font-size: 1rem;
+  color: red;
+}
+
+.feature-label-special-pp {
+  color: #009688; /* Change to desired color */
+  font-size: 16px; /* Change to desired size */
+}
+
+@media (max-width: 576px) {
+  table td, table th {
+    font-size: 14px;
+  }
+  table td h4 {
+    font-size: 18px;
+  }
+  .feature-label-special-pp {
+    font-size: 14px; /* Change to desired mobile size */
+  }
+}
+
+/* Optimizare Iarna table */
+/* Styles for the special features table */
+.table-special-features-pp-1 {
+    border: none;
+    width: 100%;
+}
+
+.table-special-features-pp-1 th, .table-special-features-pp-1 td {
+    border: none;
+}
+
+.table-special-features-pp-1 .custom-icon-1 {
+    font-size: 24px; /* Adjust the icon size */
+    color: #28a745; /* Adjust the icon color */
+}
+
+.table-special-features-pp-1 .feature-label-special-1 {
+    color: #28a745; /* Adjust the text color */
+    font-size: 18px; /* Adjust the text size */
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.table-special-features-pp-1 p {
+    color: #333; /* Adjust the text color */
+    font-size: 14px; /* Adjust the text size */
+}
+
+/* Optim iarna table styles */
+.table-optim-iarna {
+    border: none;
+    width: 100%;
+}
+
+.table-optim-iarna td {
+    border: none;
+}
+
+.h3-optim-iarna {
+    color: orange;
+    margin: 0;
+}
+
+.p-optim-iarna {
+    color: black;
+}
+
+.optim-iarna-table img {
+    max-width: 100px; /* change to your preference */
+}
+
+/* Discount table styles */
+.table-discount {
+    border: none;
+    width: 100%;
+}
+
+.table-discount td {
+    border: none;
+}
+
+.h3-discount {
+    color: red;
+    margin: 0;
+}
+
+.p-discount {
+    color: black;
+}
+
+/* Stock table styles */
+.table-special-features-pp-1 {
+    border: none;
+    width: 100%;
+}
+
+.table-special-features-pp-1 td {
+    border: none;
+}
+
+.stock-icon-cell .fas {
+    font-size: 24px;
+}
+
+.stock-icon-sufficient {
+    color: green;
+}
+
+.stock-icon-limited {
+    color: red;
+}
+
+.stock-icon-out {
+    color: red;
+}
+
+.feature-label-special-pp-1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stock-text-sufficient {
+    color: green;
+}
+
+.stock-text-limited, .stock-text-out {
+    color: red;
+}
+
+.stock-p-text {
+    color: black;
+    font-size: 14px;
+}
+
+/* Stock and Transport labels */
+.stock-status-labels,
+.transport-label {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid transparent;
+    margin-bottom: 5px;
+}
+
+.stock-sufficient {
+    color: green;
+    border-color: green;
+}
+
+.stock-limited {
+    color: orange;
+    border-color: orange;
+}
+
+.stock-out {
+    color: red;
+    border-color: red;
+}
+
+/* Other Feature labels */
+.other-feature-labels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* labels for [transp_wifi_kit_montaj_montaj] */
+.feature-label {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(10px + 1vmin); /* responsive font-size */
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.feature-label i {
+    padding-right: 2px;
+    font-size: calc(10px + 1vmin); /* responsive icon size */
+}
+
+@media only screen and (max-width: 768px) {
+    .feature-label {
+        display: block;
+    }
+}
+
+
+.plus-sign {
+    font-size: 18px;
+}
+
+.has-feature {
+    color: green;
+    border-color: green;
+}
+
+.no-feature {
+    color: red;
+    text-decoration: line-through;
+    border-color: red;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .stock-status-labels,
+    .transport-label {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .feature-label {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .icon-size i {
+        font-size: 16px;
+    }
+
+    .plus-sign {
+        font-size: 14px;
+        margin: 0 1px;
+    }
+}
+
+@media (max-width: 400px) {
+    .stock-status-labels,
+    .transport-label {
+        font-size: 8px;
+        padding: 2px;
+    }
+
+    .feature-label {
+        font-size: 8px;
+        padding: 2px;
+    }
+
+    .icon-size i {
+        font-size: 12px;
+    }
+
+    .plus-sign {
+        font-size: 10px;
+        margin: 0 1px;
+    }
+}
+
+/* Stock Status container */
+.stock-status-container {
+    display: flex;
+    align-items: center;
+}
+
+.stock-icon {
+    margin-right: 5px;
+}
+
+.stock-status-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* Adjust color for feature labels */
+.feature-label.yes {
+    color: green;
+}
+
+.feature-label.no {
+    color: red;
+}
+
+@media only screen and (max-width: 768px) {
+    .stock-status-text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+
+
+.qib-button-wrapper .quantity.wqpmb_quantity { 
+    width: auto!important;
+}
+.qib-button-wrapper .quantity input.wqpmb_input_text,
+.qib-button-wrapper button.qib-button {    
+    border: 1px solid #efefef!important;
+    margin-left: 0!important;
+    width: 41px!important;
+}
+/*
+/*This is the theme style and should remain untouched.*/
+
+/*
+	Theme Name: Hello Elementor
+	Theme URI: https://elementor.com/hello-theme/?utm_source=wp-themes&utm_campaign=theme-uri&utm_medium=wp-dash
+	Description: A plain-vanilla & lightweight theme for Elementor page builder
+	Author: Elementor Team
+	Author URI: https://elementor.com/?utm_source=wp-themes&utm_campaign=author-uri&utm_medium=wp-dash
+	Version: 2.7.1
+	Stable tag: 2.7.1
+	Requires at least: 5.9
+	Tested up to: 6.2
+	Requires PHP: 5.6
+	License: GNU General Public License v3 or later.
+	License URI: https://www.gnu.org/licenses/gpl-3.0.html
+	Text Domain: hello-elementor
+	Description: A lightweight, plain-vanilla, best suited for building your site using Elementor website builder. Visit https://elementor.com/hello-theme/ to learn more.
+	Tags: accessibility-ready, flexible-header, custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready,
+*/
+/**
+ * DO NOT CHANGE THIS FILE!
+ * To override any of the settings in this section, add your styling code in the custom directory.
+ * Loading first in the style.scss & classic-editor.scss
+ */
+/*
+ * Inspired by Normalize.css, HTML5 Boilerplate & Bootstrap Reboot Projects under MIT License
+*/
+/**
+ * Document basic styling
+ * DO NOT CHANGE THIS FILE!
+ * To override any of the settings in this section, add your styling code in the custom directory.
+ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* 3 */
+}
+
+/* Sections
+ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+/* Grouping content
+ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+  white-space: pre-wrap;
+}
+
+/* Text-level semantics
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #CC3366;
+}
+a:hover, a:active {
+  color: #333366;
+}
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+ */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Interactive
+ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.4;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Misc
+ */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Print
+ */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    page-break-inside: avoid;
+    border: 1px solid #cccccc;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/**
+ * Form styling
+ * DO NOT CHANGE THIS FILE!
+ * To override any of the settings in this section, add your styling code in the custom directory.
+ */
+label {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 1rem; /* 1 */
+  line-height: 1.5; /* 1 */
+  margin: 0; /* 2 */
+}
+
+input[type=text],
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=url],
+select,
+textarea {
+  width: 100%;
+  border: solid 1px #666666;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+input[type=text]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+select:focus,
+textarea:focus {
+  border-color: #333333;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  width: auto;
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+[type=submit],
+[type=button] {
+  display: inline-block;
+  font-weight: 400;
+  color: #CC3366;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #CC3366;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+button:focus,
+[type=submit]:focus,
+[type=button]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+button:hover, button:focus,
+[type=submit]:hover,
+[type=submit]:focus,
+[type=button]:hover,
+[type=button]:focus {
+  color: #ffffff;
+  background-color: #CC3366;
+  text-decoration: none;
+}
+button:not(:disabled),
+[type=submit]:not(:disabled),
+[type=button]:not(:disabled) {
+  cursor: pointer;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+select {
+  display: block;
+}
+
+/**
+ * Table styling
+ * DO NOT CHANGE THIS FILE!
+ * To override any of the settings in this section, add your styling code in the custom directory.
+ */
+table {
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 15px;
+  line-height: 1.5;
+  vertical-align: top;
+  border: 1px solid rgba(128, 128, 128, 0.5019607843);
+}
+table th {
+  font-weight: bold;
+}
+table thead th,
+table tfoot th {
+  font-size: 1em;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 1px solid rgba(128, 128, 128, 0.5019607843);
+}
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+  background-color: rgba(128, 128, 128, 0.0705882353);
+}
+table tbody tr:hover > td,
+table tbody tr:hover > th {
+  background-color: rgba(128, 128, 128, 0.1019607843);
+}
+table tbody + tbody {
+  border-top: 2px solid rgba(128, 128, 128, 0.5019607843);
+}
+@media (max-width: 767px) {
+  table table {
+    font-size: 0.8em;
+  }
+  table table th,
+  table table td {
+    padding: 7px;
+    line-height: 1.3;
+  }
+  table table th {
+    font-weight: 400;
+  }
+}
+
+/**
+ * List styling
+ * DO NOT CHANGE THIS FILE!
+ * To override any of the settings in this section, add your styling code in the custom directory.
+ */
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/*This is end the theme style that should remain untouched. All changes must be added below this comment.*/
