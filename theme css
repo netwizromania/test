@@ -1,0 +1,1063 @@
+.responsive-table-1 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.responsive-table-1 td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center; /* Center the text horizontally */
+  width: 33.33%; /* Equal width for 3 columns */
+  height: 100px; /* Set the height for all cells */
+  display: flex; /* Use flexbox for centering content vertically */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-table-1 tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .responsive-table-1 td {
+    display: block;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Auto height on small screens */
+  }
+
+  .responsive-table-1 td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+
+.responsive-table-2 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table-2 td {
+  border: none;
+  padding: 8px;
+}
+
+.image-cell {
+  width: 30%; /* Set the width of the image cell */
+}
+
+.image-cell img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-cell {
+  width: 70%; /* Set the width of the text cell */
+}
+
+.text-cell h3,
+.text-cell p {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .responsive-table-2 tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .image-cell,
+  .text-cell {
+    width: auto; /* Reset the width on small screens */
+  }
+
+  .text-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Add Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.custom-h2,
+.custom-h3,
+.custom-h4 {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.custom-h2 {
+  font-size: 2.25rem; /* Adjust the font size as needed */
+}
+
+.custom-h3 {
+  font-size: 1.75rem; /* Adjust the font size as needed */
+}
+
+.custom-h4 {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+/* Responsive font sizes */
+@media screen and (max-width: 991px) {
+  .custom-h2 {
+    font-size: 1.75rem;
+  }
+
+  .custom-h3 {
+    font-size: 1.5rem;
+  }
+
+  .custom-h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom-h2 {
+    font-size: 1.5rem;
+  }
+
+  .custom-h3 {
+    font-size: 1.3rem;
+  }
+
+  .custom-h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Feature labels */
+.feature-label-special {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-right: 10px;
+    line-height: 1.5;
+}
+
+.feature-label-special i {
+    margin-right: 5px;
+}
+
+.has-feature-special {
+    color: green;
+}
+
+.no-feature-special {
+    color: red;
+}
+
+/* Stock status */
+.feature-label-special.stock-sufficient {
+    color: green;
+}
+
+.feature-label-special.stock-limited {
+    color: orange;
+}
+
+.feature-label-special.stock-out {
+    color: grey;
+}
+
+/* For responsive design */
+@media screen and (max-width: 768px) {
+    .feature-label-special {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Optimizat iarna table */
+.optim-iarna-table {
+    width: 100%;
+}
+
+.optim-iarna-table .image-cell {
+    width: 20%;
+}
+
+.optim-iarna-table .text-cell {
+    width: 80%;
+    vertical-align: middle;
+}
+
+.h3-optim-iarna, .p-optim-iarna {
+    margin: 0;
+}
+
+.h3-optim-iarna {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+.p-optim-iarna {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: grey;
+}
+
+/* Discount percentage table */
+.discount-percentage-table {
+    width: 100%;
+}
+
+.discount-percentage-table .discount-icon-cell {
+    width: 20%;
+}
+
+.discount-percentage-table .discount-text-cell {
+    width: 80%;
+    vertical-align: middle;
+}
+
+.h3-discount-percentage, .p-discount-percentage {
+    margin: 0;
+}
+
+.h3-discount-percentage {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: red;
+}
+
+.p-discount-percentage {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: grey;
+}
+
+/* Responsive design for small screens */
+@media only screen and (max-width: 600px) {
+    .optim-iarna-table .image-cell,
+    .optim-iarna-table .text-cell,
+    .discount-percentage-table .discount-icon-cell,
+    .discount-percentage-table .discount-text-cell {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+/* .category-feature-labels {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+} */
+.category-feature-labels {
+	position: absolute;
+	margin-top: 70%;
+	margin-left: -5%;
+	width: 110% !important;
+	display: flex;
+	flex-wrap: wrap;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.category-label {
+    font-size: .6rem;
+    margin-bottom: .4rem;
+	padding: .25rem;
+    font-weight: bold;
+	margin-left: .4rem;
+	width: 7rem;
+}
+
+.has-feature-category {
+    color: white;
+    background-color: #39B24C;
+}
+
+.no-feature-category {
+    color: white;
+    background-color: red;
+	text-decoration: line-through;
+}
+/* MODIFICARI RAZVAN */
+/* PRODUS - INFORMATII SUPLIMENTARE */
+.woocommerce table.shop_attributes td {
+	padding: 1% !important;
+}
+.woocommerce table.shop_attributes th {
+	border: 1px solid lightgray !important;
+	padding: 1% !important;
+}
+.woocommerce table.shop_attributes td p {
+	padding: 0;
+}
+/* REDUCERI */
+.onsale {
+	padding: 2% !important;
+	text-transform: uppercase; 
+}
+.woocommerce span.onsale {
+	min-height: 0;
+	min-width: 0;
+	border-radius: 0;
+	line-height: .6;
+	background-color: #39B24C;
+}
+/* LOOP PRODUSE */
+.woocommerce-loop-product__buttons a {
+	width: 100%;
+}
+/* .category-feature-labels {
+	display: flex;
+	margin-top: 80%;
+	width: 100% !important;
+	flex-wrap: wrap;
+} */
+/* .category-feature-labels {
+	flex: .5 1 50%;
+	padding: 0;
+	padding-bottom: 1%;
+	margin: 0; 
+} */
+/* .category-feature-label {
+	font-size: .7rem !important;
+	font-weight: 400;
+	text-align: left;
+	background-color: transparent;
+	color: #2AA7EC;
+}  */
+/* PRODUCT TITLE */
+.woocommerce-loop-product__title {
+	color: #39B24C;
+}
+/* PRICE */
+.woocommerce-Price-amount {
+	color: #2AA7EC;
+	padding-right: 10%;	font-family: "Montserrat", "Sans Serif";
+	font-weight: 800 !important;
+}
+/* PRODUCT */
+.product {
+	text-align: center !important;
+}
+/* PRODUCT BREADCRUMBS */
+.woocommerce-breadcrumb {
+	text-align: left;
+}
+/* PRODUCT TITLE */
+.product_title {
+	text-align: left;
+}
+.elementor-page-title  {
+	margin: 0; 
+}
+/* FONTS */
+.elementor-heading-title {
+	font-family: "Montserrat", Sans-serif !important;
+	font-weight: 400 !important;
+	color: #2AA7EC !important;
+}
+
+.elementor-heading-title h2 {
+	font-size: 2rem !important;
+}
+
+.elementor-heading-title h3 {
+	font-size: 1.8rem !important;
+}
+
+.elementor-heading-title h4 {
+	font-size: 1.6rem !important;
+}
+
+.elementor-heading-title h5 {
+	font-size: 1.4rem !important;
+}
+
+.woocommerce-product-details__short-description {
+	font-family: "Montserrat", Sans-serif !important;
+	font-size: 1rem !important;
+	line-height: 1.4rem !important;
+	font-weight: 400 !important;
+}
+
+@media screen and (max-width: 1024px) {
+	/* tablet styles */
+	.elementor-heading-title h2 {
+		font-size: 1.6rem !important;
+	}
+
+	.elementor-heading-title h3 {
+		font-size: 1.4rem !important;
+	}
+
+	.elementor-heading-title h4 {
+		font-size: 1.2rem !important;
+	}
+
+	.elementor-heading-title h5 {
+		font-size: 1rem !important;
+	}
+
+	.woocommerce-product-details__short-description {
+		font-size: 0.9rem !important;
+		line-height: 1.2rem !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	/* mobile styles */
+	.elementor-heading-title h2 {
+		font-size: 1.4rem !important;
+	}
+
+	.elementor-heading-title h3 {
+		font-size: 1.2rem !important;
+	}
+
+	.elementor-heading-title h4 {
+		font-size: 1rem !important;
+	}
+
+	.elementor-heading-title h5 {
+		font-size: 0.9rem !important;
+	}
+
+	.woocommerce-product-details__short-description {
+		font-size: 0.8rem !important;
+		line-height: 1.1rem !important;
+	}
+}
+
+.woocommerce-breadcrumb {
+	color: #2AA7EC !important;
+}
+/* PRODUCT FEATURE TABLE */
+.feature-table-product td {
+	border: 3px solid;
+	color: #2AA7EC;
+	width: 50%;
+	margin-left: 1% !important;
+}
+.feature-table-product span {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+table td, table th {
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: transparent !important;
+}
+table td:hover, table th:hover {
+	background-color: transparent;
+}
+.feature-table-product tr {
+	display: flex;
+	margin-top: 1%;
+	background-color: transparent;
+}
+.feature-label-special {
+	font-size: .8rem;
+	font-weight: 400;
+}
+
+.responsive-feature-table {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* PRODUCT FEATURE CONTAINER */
+.feature-container {
+    width: 50%;  /* mobile layout */
+    box-sizing: border-box; /* include padding and border in element's total width and height */
+    padding: 5px; /* optional, for some spacing */
+}
+
+@media (min-width: 768px) {
+    .feature-container {
+        width: 25%; /* desktop layout */
+    }
+}
+
+
+/* STOC */
+.stock, .in-stock {
+	display: none !important;
+}
+/* PRODUCT PRET & ADD TO CART */
+.price {
+	margin: 0;
+}
+.quantity {
+	width: 20%;
+}
+.single_add_to_cart_button, .qty {
+	width: 68% !important;
+	border: 4px solid !important;
+	font-family: "Montserrat", Sans-serif !important;
+	background-color: #39B24C !important;
+	font-weight: 400;
+	color: white !important;
+}
+.single_add_to_cart_button {
+	margin-left: 0 !important;
+}
+/* PRODUCT DIN ACEEASI GAMA */
+@media screen and (max-width: 1024px) {
+  /* styles for tablets and below */
+  .elementor-shortcode a {
+    background-color: transparent;
+    padding: 5%;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: #39B24C;
+    border: 1px solid #39B24C;
+    transition: background-color 0.3s ease;
+  }
+
+  .elementor-shortcode a:hover {
+    background-color: #39B24C;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* styles for desktop and above */
+  .elementor-shortcode a {
+    background-color: transparent;
+    padding: 5%;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: #39B24C;
+    border: 1px solid #39B24C;
+    transition: background-color 0.3s ease;
+  }
+
+  .elementor-shortcode a:hover {
+    background-color: #39B24C;
+    color: white;
+  }
+}
+
+/* PRODUCT IMAGE */
+.elementor-element-populated {
+	box-shadow: none !important;
+}
+
+.show-on-sale {
+	display: none;
+}
+
+.sale .show-on-sale {
+	display: block;
+}
+
+.e-checkout__container .button.primary {
+	padding: var(--sections-padding,16px 30px);
+    margin-bottom: 20px;
+}
+
+.woocommerce-product-attributes-item__label {
+	width: 50%!important;
+}
+
+/* Video table product page */
+.table-video-p-clima {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table-video-p-clima > div {
+    flex: 50%;
+    padding: 5px;
+}
+
+.table-video-p-clima > div.video-container {
+    position: relative;
+    overflow: hidden;
+    height: 360px; /* Adjust this value based on your needs for larger screens */
+}
+
+.table-video-p-clima > div.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.table-video-p-clima-h3 {
+    font-size: 20px;
+    /* Add more styles as needed */
+}
+
+.table-video-p-clima-p {
+    font-size: 16px;
+    /* Add more styles as needed */
+}
+
+@media (max-width: 400px) {
+    .table-video-p-clima > div {
+        flex: 100%;
+    }
+    .table-video-p-clima > div.video-container {
+        height: 200px; /* Adjust this value based on your needs for smaller screens */
+    }
+}
+
+/* PRODUCT MIDEA */
+.table-midea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table-midea .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-midea .cell {
+    flex: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.table-midea .midea-pp .midea-h3 {
+    font-size: 24px!important;
+    line-height: 1.2!important; /* Adjust as needed */
+    color: #0099da!important;
+}
+
+.table-midea .midea-pp .midea-p {
+    font-size: 16px!important;
+    line-height: 1.5!important; /* Adjust as needed */
+}
+
+.table-midea .cell img {
+    max-width: 100%;
+    height: auto;
+}
+
+.table-midea,
+.table-midea .row,
+.table-midea .cell {
+    border: none;
+    border-collapse: collapse;
+}
+
+
+@media (max-width: 400px) {
+    .table-midea .cell {
+        flex: 100%;
+    }
+}
+
+/* PRODUCT Yamato */
+.table-yamato {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table-yamato .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-yamato .cell {
+    flex: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.table-yamato .yamato-pp .yamato-h3 {
+    font-size: 24px!important;
+    line-height: 1.2!important; /* Adjust as needed */
+    color: #DA4100!important;
+}
+
+.table-yamato .yamato-pp .yamato-p {
+    font-size: 16px!important;
+    line-height: 1.5!important; /* Adjust as needed */
+}
+
+.table-yamato .cell img {
+    max-width: 100%;
+    height: auto;
+}
+
+.table-yamato,
+.table-yamato .row,
+.table-yamato .cell {
+    border: none;
+    border-collapse: collapse;
+}
+
+
+@media (max-width: 400px) {
+    .table-yamato .cell {
+        flex: 100%;
+    }
+}
+
+/* PRODUCT gree */
+.table-gree {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.table-gree .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-gree .cell {
+    flex: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.table-gree .gree-pp .gree-h3 {
+    font-size: 24px!important;
+    line-height: 1.2!important; /* Adjust as needed */
+    color: #003F5A!important;
+}
+
+.table-gree .gree-pp .gree-p {
+    font-size: 16px!important;
+    line-height: 1.5!important; /* Adjust as needed */
+}
+
+.table-gree .cell img {
+    max-width: 100%;
+    height: auto;
+}
+
+.table-gree,
+.table-gree .row,
+.table-gree .cell {
+    border: none;
+    border-collapse: collapse;
+}
+
+
+@media (max-width: 400px) {
+    .table-gree .cell {
+        flex: 100%;
+    }
+}
+
+/* Stock product page */
+
+.custom-icon-pp {
+  font-size: 1rem;
+  color: red;
+}
+
+.feature-label-special-pp {
+  color: #009688; /* Change to desired color */
+  font-size: 16px; /* Change to desired size */
+}
+
+@media (max-width: 576px) {
+  table td, table th {
+    font-size: 14px;
+  }
+  table td h4 {
+    font-size: 18px;
+  }
+  .feature-label-special-pp {
+    font-size: 14px; /* Change to desired mobile size */
+  }
+}
+
+/* Optimizare Iarna table */
+/* Styles for the special features table */
+.table-special-features-pp-1 {
+    border: none;
+    width: 100%;
+}
+
+.table-special-features-pp-1 th, .table-special-features-pp-1 td {
+    border: none;
+}
+
+.table-special-features-pp-1 .custom-icon-1 {
+    font-size: 24px; /* Adjust the icon size */
+    color: #28a745; /* Adjust the icon color */
+}
+
+.table-special-features-pp-1 .feature-label-special-1 {
+    color: #28a745; /* Adjust the text color */
+    font-size: 18px; /* Adjust the text size */
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.table-special-features-pp-1 p {
+    color: #333; /* Adjust the text color */
+    font-size: 14px; /* Adjust the text size */
+}
+
+/* Optim iarna table styles */
+.table-optim-iarna {
+    border: none;
+    width: 100%;
+}
+
+.table-optim-iarna td {
+    border: none;
+}
+
+.h3-optim-iarna {
+    color: orange;
+    margin: 0;
+}
+
+.p-optim-iarna {
+    color: black;
+}
+
+.optim-iarna-table img {
+    max-width: 100px; /* change to your preference */
+}
+
+/* Discount table styles */
+.table-discount {
+    border: none;
+    width: 100%;
+}
+
+.table-discount td {
+    border: none;
+}
+
+.h3-discount {
+    color: red;
+    margin: 0;
+}
+
+.p-discount {
+    color: black;
+}
+
+/* Stock table styles */
+.table-special-features-pp-1 {
+    border: none;
+    width: 100%;
+}
+
+.table-special-features-pp-1 td {
+    border: none;
+}
+
+.stock-icon-cell .fas {
+    font-size: 24px;
+}
+
+.stock-icon-sufficient {
+    color: green;
+}
+
+.stock-icon-limited {
+    color: red;
+}
+
+.stock-icon-out {
+    color: red;
+}
+
+.feature-label-special-pp-1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stock-text-sufficient {
+    color: green;
+}
+
+.stock-text-limited, .stock-text-out {
+    color: red;
+}
+
+.stock-p-text {
+    color: black;
+    font-size: 14px;
+}
+
+/* Stock and Transport labels */
+.stock-status-labels,
+.transport-label {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 5px;
+    border: 1px solid transparent;
+    margin-bottom: 5px;
+}
+
+.stock-sufficient {
+    color: green;
+    border-color: green;
+}
+
+.stock-limited {
+    color: orange;
+    border-color: orange;
+}
+
+.stock-out {
+    color: red;
+    border-color: red;
+}
+
+/* Other Feature labels */
+.other-feature-labels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* labels for [transp_wifi_kit_montaj_montaj] */
+.feature-label {
+    display: flex;
+	  align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(10px + 1vmin); /* responsive font-size */
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.feature-label i {
+    padding-right: 2px;
+    font-size: calc(11px + 1vmin); /* responsive icon size */
+}
+
+@media only screen and (max-width: 768px) {
+    .feature-label {
+        display: block;
+    }
+}
+
+
+.plus-sign {
+    font-size: 18px;
+}
+
+.has-feature {
+    color: green;
+    border-color: green;
+}
+
+.no-feature {
+    color: red;
+    text-decoration: line-through;
+    border-color: red;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .stock-status-labels,
+    .transport-label {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .feature-label {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .icon-size i {
+        font-size: 16px;
+    }
+
+    .plus-sign {
+        font-size: 14px;
+        margin: 0 1px;
+    }
+}
+
+@media (max-width: 400px) {
+    .stock-status-labels,
+    .transport-label {
+        font-size: 8px;
+        padding: 2px;
+    }
+
+    .feature-label {
+        font-size: 8px;
+        padding: 2px;
+    }
+
+    .icon-size i {
+        font-size: 12px;
+    }
+
+    .plus-sign {
+        font-size: 10px;
+        margin: 0 1px;
+    }
+}
+
+/* Stock Status container */
+.stock-status-container {
+    display: flex;
+    align-items: center;
+}
+
+.stock-icon {
+    margin-right: 5px;
+}
+
+.stock-status-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+/* Adjust color for feature labels */
+.feature-label.yes {
+    color: green;
+}
+
+.feature-label.no {
+    color: red;
+}
+
+@media only screen and (max-width: 768px) {
+    .stock-status-text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+
+
+.qib-button-wrapper .quantity.wqpmb_quantity { 
+    width: auto!important;
+}
+.qib-button-wrapper .quantity input.wqpmb_input_text,
+.qib-button-wrapper button.qib-button {    
+    border: 1px solid #efefef!important;
+    margin-left: 0!important;
+    width: 41px!important;
+}
