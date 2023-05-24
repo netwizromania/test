@@ -1,3 +1,17 @@
+function hello_elementor_child_scripts_styles() {
+
+    wp_enqueue_style(
+        'hello-elementor-child-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        [
+            'hello-elementor-theme-style',
+        ],
+        HELLO_ELEMENTOR_CHILD_VERSION
+    );
+
+}
+add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
+
 /* Product page labels */
 function display_feature_labels( $attr = '', $return = false ) {
     if (empty($attr)) {
@@ -440,37 +454,48 @@ function display_discount_percentage( $atts ) {
 add_shortcode( 'discount_percentage', 'display_discount_percentage' );
 
 /* Category page labels */
-function display_stock_status() {
-    global $product;
+/* 
+ * This function is used to display the stock status of a product.
+ */
+function display_stock_status() {  
+  global $product;  
 
-    if ( ! $product ) {
-        global $post;
-        $product = wc_get_product($post->ID);
-    }
+  // Checking if the product is set
+  if ( ! $product ) {  
+    global $post;  
+    $product = wc_get_product($post->ID);  
+  }  
 
-    // Stock status
-    $stock_quantity = $product->get_stock_quantity();
-    $stock_status = '';
-    $stock_icon = '';
-    $stock_text_color = '';
+  // If the product is still not set, we return
+  if(!$product) {
+    return;
+  }
 
-    if ($stock_quantity > 5) {
-        $stock_status = 'Stoc suficient';
-        $stock_icon = 'fas fa-check-circle';
-        $stock_text_color = 'green';
-    } elseif ($stock_quantity > 0 && $stock_quantity <= 5) {
-        $stock_status = 'Stoc limitat';
-        $stock_icon = 'fas fa-exclamation-circle';
-        $stock_text_color = '#FF6347';
-    } else {
-        $stock_status = 'Indisponibil';
-        $stock_icon = 'fas fa-dot-circle-o';
-        $stock_text_color = 'grey';
-    }
+  // Stock status  
+  $stock_quantity = $product->get_stock_quantity();  
+  $stock_status = '';  
+  $stock_icon = '';  
+  $stock_text_color = '';  
 
-    echo '<div class="stock-product-loop" style="color:' . $stock_text_color . ';">';
-    echo '<i class="' . $stock_icon . '"></i> ' . $stock_status;
-    echo '</div>';
+  // Assigning values based on stock quantity
+  if ($stock_quantity > 5) {  
+    $stock_status = 'Stoc suficient';  
+    $stock_icon = 'fas fa-check-circle';  
+    $stock_text_color = 'stock-green';  
+  } elseif ($stock_quantity > 0 && $stock_quantity <= 5) {  
+    $stock_status = 'Stoc limitat';  
+    $stock_icon = 'fas fa-exclamation-circle';  
+    $stock_text_color = 'stock-orange';  
+  } else {  
+    $stock_status = 'Indisponibil';  
+    $stock_icon = 'fas fa-dot-circle-o';  
+    $stock_text_color = 'stock-grey';  
+  }  
+
+  // Echoing out the stock status with assigned values
+  echo '<div class="stock-product-loop ' . $stock_text_color . '">';  
+  echo '<i class="' . $stock_icon . '"></i> ' . $stock_status;  
+  echo '</div>';  
 }
 
 function display_transport_status() {
@@ -637,4 +662,3 @@ function display_montaj( $atts ) {
     return ob_get_clean();
 }
 add_shortcode( 'montaj', 'display_montaj' );
-
